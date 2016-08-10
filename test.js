@@ -15,6 +15,13 @@ log('custom', 'log.DEBUG = false', 1,2,3,4,5,6,7 );
 
 log.DEBUG = true;
 
+log( 'any ather type or other data type of first arguments',
+	'log.DEBUG = true',
+	'any', 'count',
+	1,2,3,4,
+	{ and: 'any type', of: ['data'] }
+);
+
 log( 'log',
 	'log.DEBUG = true',
 	'any', 'count',
@@ -30,6 +37,13 @@ log('info',
 );
 
 log('warn',
+	'log.DEBUG = true',
+	'any', 'count',
+	1,2,3,4,
+	{ and: 'any type', of: ['data'] }
+);
+
+log('error',
 	'log.DEBUG = true',
 	'any', 'count',
 	1,2,3,4,

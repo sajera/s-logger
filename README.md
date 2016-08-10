@@ -6,7 +6,7 @@ s-logger
 npm i s-logger --save
 ```
 
-Example usage:
+Usage:
 ---------------
 ```javascript
 var log = require('s-logger');
@@ -27,8 +27,6 @@ log.DEBUG // default false, but inherit previos changes
 log( typeOflog, 'any', 'count', 1,2,3,4, { and: 'any type', of: ['data'] } );
 ```
 
-> It would be interesting to know how you make out your logs.
-
 Example out in chrome devtool:
 ---------------
 ```javascript
@@ -44,19 +42,9 @@ log( 'warn', 'log.DEBUG = true', 'any', 'count', 1,2,3,4, { and: 'any type', of:
 // S WARN:
 //	log.DEBUG = true any count 1 2 3 4 Object {and: "any type", of: Array[1]}
 
-// as usual i make out of my log
-log('custom',
-	'log.DEBUG:', log.DEBUG,
-	'simple action result:', 'BEST'.toLowerCase(),
-	'some Object:', { and: 'any type', of: ['data'], 1: 1 },
-	'some Array:', [1,2,3,'some other']
-);
-/* S
-	log.DEBUG: true
-	simple action result: best
-	some Object: Object { '1': 1, and: 'any type', of: [ 'data' ] }
-	some Array: [ 1, 2, 3, 'some other' ]
-*/
+log( 'error', 'log.DEBUG = true', 'any', 'count', 1,2,3,4, { and: 'any type', of: ['data'] } );
+// S WARN:
+//	log.DEBUG = true any count 1 2 3 4 Object {and: "any type", of: Array[1]}
 ```
 Example out in cmd:
 ---------------
@@ -73,7 +61,19 @@ log( 'warn', 'log.DEBUG = true', 'any', 'count', 1,2,3,4, { and: 'any type', of:
 // S WARN:
 //	log.DEBUG = true any count 1 2 3 4 Object {and: "any type", of: Array[1]}
 
-// as usual i make out of my log
+log( 'error', 'log.DEBUG = true', 'any', 'count', 1,2,3,4, { and: 'any type', of: ['data'] } );
+// S WARN:
+//	log.DEBUG = true any count 1 2 3 4 Object {and: "any type", of: Array[1]}
+
+// 
+
+```
+
+> It would be interesting to know how you make out your logs.
+
+As usual i make out of my log
+---------------
+```javascript
 log('custom',
 	'log.DEBUG:', log.DEBUG,
 	'simple action result:', 'BEST'.toLowerCase(),
@@ -91,4 +91,3 @@ log('custom',
 	some Array: [ 1, 2, 3, 'some other' ]
 */
 ```
-
