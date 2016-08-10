@@ -105,9 +105,6 @@ log( 'warn', 'log.DEBUG = true', 'any', 'count', 1,2,3,4, { and: 'any type', of:
 log( 'error', 'log.DEBUG = true', 'any', 'count', 1,2,3,4, { and: 'any type', of: ['data'] } );
 // S WARN:
 //	log.DEBUG = true any count 1 2 3 4 Object {and: "any type", of: Array[1]}
-
-// 
-
 ```
 
 > It would be interesting to know how you make out your logs.
