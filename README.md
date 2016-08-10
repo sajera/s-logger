@@ -1,0 +1,94 @@
+s-logger
+===============
+### A simple log with DEBUG state and light customization
+
+```shell
+npm i s-logger --save
+```
+
+Example usage:
+---------------
+```javascript
+var log = require('s-logger');
+
+log.DEBUG = true;
+
+log( typeOflog, 'any', 'count', 1,2,3,4, { and: 'any type', of: ['data'] } );
+```
+
+**Note:** DEBUG you can change any time. But it was conceived as a response to the setting when initializing the application in the states DEBUG = true/false. This means that after the change log flag ceases to work in all parts of the application.
+
+
+```javascript
+var log = require('s-logger');
+
+log.DEBUG // default false, but inherit previos changes
+
+log( typeOflog, 'any', 'count', 1,2,3,4, { and: 'any type', of: ['data'] } );
+```
+
+> It would be interesting to know how you make out your logs.
+
+Example out in chrome devtool:
+---------------
+```javascript
+log( 'log', 'log.DEBUG = true', 'any', 'count', 1,2,3,4, { and: 'any type', of: ['data'] } );
+// S LOG:
+//	log.DEBUG = true any count 1 2 3 4 Object {and: "any type", of: Array[1]}
+
+log( 'info', 'log.DEBUG = true', 'any', 'count', 1,2,3,4, { and: 'any type', of: ['data'] } );
+// S INFO:
+//	log.DEBUG = true any count 1 2 3 4 Object {and: "any type", of: Array[1]}
+
+log( 'warn', 'log.DEBUG = true', 'any', 'count', 1,2,3,4, { and: 'any type', of: ['data'] } );
+// S WARN:
+//	log.DEBUG = true any count 1 2 3 4 Object {and: "any type", of: Array[1]}
+
+// as usual i make out of my log
+log('custom',
+	'log.DEBUG:', log.DEBUG,
+	'simple action result:', 'BEST'.toLowerCase(),
+	'some Object:', { and: 'any type', of: ['data'], 1: 1 },
+	'some Array:', [1,2,3,'some other']
+);
+/* S
+	log.DEBUG: true
+	simple action result: best
+	some Object: Object { '1': 1, and: 'any type', of: [ 'data' ] }
+	some Array: [ 1, 2, 3, 'some other' ]
+*/
+```
+Example out in cmd:
+---------------
+```javascript
+log( 'log', 'log.DEBUG = true', 'any', 'count', 1,2,3,4, { and: 'any type', of: ['data'] } );
+// S LOG:
+//	log.DEBUG = true any count 1 2 3 4 Object {and: "any type", of: Array[1]}
+
+log( 'info', 'log.DEBUG = true', 'any', 'count', 1,2,3,4, { and: 'any type', of: ['data'] } );
+// S INFO:
+//	log.DEBUG = true any count 1 2 3 4 Object {and: "any type", of: Array[1]}
+
+log( 'warn', 'log.DEBUG = true', 'any', 'count', 1,2,3,4, { and: 'any type', of: ['data'] } );
+// S WARN:
+//	log.DEBUG = true any count 1 2 3 4 Object {and: "any type", of: Array[1]}
+
+// as usual i make out of my log
+log('custom',
+	'log.DEBUG:', log.DEBUG,
+	'simple action result:', 'BEST'.toLowerCase(),
+	'some Object:', { and: 'any type', of: ['data'], 1: 1 },
+	'some Array:', [1,2,3,'some other']
+);
+/* S
+
+	log.DEBUG: true
+	
+	simple action result: best
+	
+	some Object: Object { '1': 1, and: 'any type', of: [ 'data' ] }
+	
+	some Array: [ 1, 2, 3, 'some other' ]
+*/
+```
+

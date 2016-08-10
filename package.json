@@ -1,0 +1,21 @@
+{
+  "name": "s-logger",
+  "version": "1.0.1",
+  "description": "A simple logger with DEBUG state and light customization",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sajera/s-logger.git"
+  },
+  "keywords": [ "log", "logger", "s-log","s-logger" ],
+  "author": "sajera",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sajera/s-logger/issues"
+  },
+  "homepage": "https://github.com/sajera/s-logger#readme",
+  "dependencies": {},
+  "scripts": {
+    "test": "node ./test"
+  }
+}
