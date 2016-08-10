@@ -58,7 +58,7 @@ function label ( text, color, bg ) {
 	if ( typeof window == 'undefined' ) {
 		var tagBG = cmdBG( bg );
 		var tagColor = cmdColor( color );
-		console.log( tagColor.open+tagBG.open+text+tagBG.close+tagColor.close+'\x1B[0m\x1B[0m');
+		console.log( tagColor.open+tagBG.open+text+tagBG.close+tagColor.close+'\x1B[0m');
 	} else {
 		console.log( '%c'+text, 'color:'+String( color|| 'inherit' )+( bg ? ';background:'+ String( bg || 'transparent' ) : '' ) );
 	}
