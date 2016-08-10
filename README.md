@@ -27,6 +27,46 @@ log.DEBUG // default false, but inherit previos changes
 log( typeOflog, 'any', 'count', 1,2,3,4, { and: 'any type', of: ['data'] } );
 ```
 
+**Note:** since version 1.1.2 adds the ability to change the color scheme of shortcut.
+**Colors:** black, red, green, yellow, blue, magenta, cyan, white, grey.
+**Backgrounds:**  black, red, green, yellow, blue, magenta, cyan, white.
+
+Configure:
+---------------
+```javascript
+var log = require('s-logger');
+
+log.DEBUG // default false, but inherit previos changes
+
+// a shortcut for each message, in addition to the default
+log.LOG = {
+	text: 'S-LOG:',
+	color: 'grey',
+	bg: '',
+};
+log.INFO = {
+	text: 'S-INFO:',
+	color: 'white',
+	bg: 'green',
+};
+log.WARN = {
+	text: 'S-WARN:',
+	color: 'blue',
+	bg: 'yellow',
+};
+log.ERROR = {
+	text: 'S-ERROR:',
+	color: 'black',
+	bg: 'red',
+};
+log.CUSTOM = {
+	text: 'S-LOG-PAIRS:',
+	color: 'white',
+	bg: '',
+};
+
+```
+
 Example out in chrome devtool:
 ---------------
 ```javascript
