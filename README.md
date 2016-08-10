@@ -28,8 +28,8 @@ log( typeOflog, 'any', 'count', 1,2,3,4, { and: 'any type', of: ['data'] } );
 ```
 
 **Note:** since version 1.1.2 adds the ability to change the color scheme of shortcut.
-**Colors:** black, red, green, yellow, blue, magenta, cyan, white, grey.
-**Backgrounds:**  black, red, green, yellow, blue, magenta, cyan, white.
+\n**Colors:** black, red, green, yellow, blue, magenta, cyan, white, grey.
+\n**Backgrounds:**  black, red, green, yellow, blue, magenta, cyan, white.
 
 Configure:
 ---------------
