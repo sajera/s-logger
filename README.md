@@ -72,38 +72,38 @@ Example out in chrome devtool:
 ---------------
 ```javascript
 log( 'log', 'log.DEBUG = true', 'any', 'count', 1,2,3,4, { and: 'any type', of: ['data'] } );
-// S LOG:
+// S-LOG:
 //	log.DEBUG = true any count 1 2 3 4 Object {and: "any type", of: Array[1]}
 
 log( 'info', 'log.DEBUG = true', 'any', 'count', 1,2,3,4, { and: 'any type', of: ['data'] } );
-// S INFO:
+// S-INFO:
 //	log.DEBUG = true any count 1 2 3 4 Object {and: "any type", of: Array[1]}
 
 log( 'warn', 'log.DEBUG = true', 'any', 'count', 1,2,3,4, { and: 'any type', of: ['data'] } );
-// S WARN:
+// S-WARN:
 //	log.DEBUG = true any count 1 2 3 4 Object {and: "any type", of: Array[1]}
 
 log( 'error', 'log.DEBUG = true', 'any', 'count', 1,2,3,4, { and: 'any type', of: ['data'] } );
-// S WARN:
+// S-ERROR:
 //	log.DEBUG = true any count 1 2 3 4 Object {and: "any type", of: Array[1]}
 ```
 Example out in cmd:
 ---------------
 ```javascript
 log( 'log', 'log.DEBUG = true', 'any', 'count', 1,2,3,4, { and: 'any type', of: ['data'] } );
-// S LOG:
+// S-LOG:
 //	log.DEBUG = true any count 1 2 3 4 Object {and: "any type", of: Array[1]}
 
 log( 'info', 'log.DEBUG = true', 'any', 'count', 1,2,3,4, { and: 'any type', of: ['data'] } );
-// S INFO:
+// S-INFO:
 //	log.DEBUG = true any count 1 2 3 4 Object {and: "any type", of: Array[1]}
 
 log( 'warn', 'log.DEBUG = true', 'any', 'count', 1,2,3,4, { and: 'any type', of: ['data'] } );
-// S WARN:
+// S-WARN:
 //	log.DEBUG = true any count 1 2 3 4 Object {and: "any type", of: Array[1]}
 
 log( 'error', 'log.DEBUG = true', 'any', 'count', 1,2,3,4, { and: 'any type', of: ['data'] } );
-// S WARN:
+// S-ERROR:
 //	log.DEBUG = true any count 1 2 3 4 Object {and: "any type", of: Array[1]}
 ```
 
