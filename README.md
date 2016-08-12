@@ -6,67 +6,77 @@ s-logger
 npm i s-logger --save
 ```
 
-Usage:
+Basic usage:
 ---------------
 ```javascript
 var log = require('s-logger');
 
-log.DEBUG = true;
+log.DEBUG = true; // default false, but inherit previos changes
 
-log( typeOflog, 'any', 'count', 1,2,3,4, { and: 'any type', of: ['data'] } );
+log( 'log', 'any', 'count', 1,2,3,4, { and: 'any type', of: ['data'] } );
 ```
 
 **Note:** DEBUG you can change any time. But it was conceived as a response to the setting when initializing the application in the states DEBUG = true/false. This means that after the change log flag ceases to work in all parts of the application.
-
-
-```javascript
-var log = require('s-logger');
-
-log.DEBUG // default false, but inherit previos changes
-
-log( typeOflog, 'any', 'count', 1,2,3,4, { and: 'any type', of: ['data'] } );
-```
 
 **Note:** since version 1.1.2 adds the ability to change the color scheme of shortcut.
  >**Colors:** black, red, green, yellow, blue, magenta, cyan, white, grey.
  <br/>
  >**Backgrounds:**  black, red, green, yellow, blue, magenta, cyan, white.
 
-Configure:
+Customization:
 ---------------
 ```javascript
+// complete detailed configuration
+var config = {
+	DEBUG: false,
+	CUSTOM: {
+		text: 'custom-CUSTOM',
+		background: 'black',
+		color: 'grey',
+		log: function ( arrayOfArguments ) { // only for custom
+			for ( var key = 0; key < arrayOfArguments.length; key ++ ) {
+				console.log( arrayOfArguments[ key ] );
+			}
+		}
+	},
+	ERROR: {
+		text: 'custom-ERROR',
+		background: 'red',
+		color: 'white',
+	},
+	WARN: {
+		text: 'custom-WARN',
+		background: 'green',
+		color: 'cyan',
+	},
+	INFO: {
+		text: 'custom-INFO',
+		background: 'yellow',
+		color: 'magenta',
+	},
+	LOG: {
+		text: 'custom-LOG',
+		background: 'blue',
+		color: 'red',
+	}
+};
+
 var log = require('s-logger');
 
+var customLog = log.create( 'uniqueIdOfLogger-hash-care', config );
+
+// It does not intersect with the other loggers
 log.DEBUG // default false, but inherit previos changes
 
-// a shortcut for each message, in addition to the default
-log.LOG = {
-	text: 'S-LOG:',
-	color: 'grey',
-	bg: '',
-};
-log.INFO = {
-	text: 'S-INFO:',
-	color: 'white',
-	bg: 'green',
-};
-log.WARN = {
-	text: 'S-WARN:',
-	color: 'blue',
-	bg: 'yellow',
-};
-log.ERROR = {
-	text: 'S-ERROR:',
-	color: 'black',
-	bg: 'red',
-};
-log.CUSTOM = {
-	text: 'S-LOG-PAIRS:',
-	color: 'white',
-	bg: '',
-};
-
+// Can be another file (connected later)
+if ( customLog === ( require('s-logger') ).get('uniqueIdOfLogger-hash-care') ) {
+	customLog( 'Completely usability victory !!!' );
+} else {
+	log( 'Completely fail ...' );
+}
 ```
+**Note:** Delegation to other files is due to mapping inside
+
 
 Example out in chrome devtool:
 ---------------

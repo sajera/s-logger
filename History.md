@@ -8,8 +8,12 @@
 
 
 
-
-
+2.0.0 / 2016-09-12 
+------------------
+* I thought about the beautiful suggested to me that there is a need for a number of different logger within a single application.
+	1. color change made to the configuration
+	2. added methods of making and receiving ( create / get )
+	DEBUG still dynamic
 
 1.1.2 / 2016-08-26 
 ------------------
