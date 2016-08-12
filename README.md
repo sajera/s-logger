@@ -28,7 +28,7 @@ Customization:
 ```javascript
 // complete detailed configuration
 var config = {
-	DEBUG: false,
+	DEBUG: true,
 	CUSTOM: {
 		text: 'custom-CUSTOM',
 		background: 'black',
