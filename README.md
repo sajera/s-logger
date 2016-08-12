@@ -65,8 +65,10 @@ var log = require('s-logger');
 
 var customLog = log.create( 'uniqueIdOfLogger-hash-care', config );
 
-// It does not intersect with the other loggers
-log.DEBUG // default false, but inherit previos changes
+
+// default false, but inherit previos changes
+log.DEBUG
+customLog.DEBUG // It does not intersect with the other loggers
 
 // Can be another file (connected later)
 if ( customLog === ( require('s-logger') ).get('uniqueIdOfLogger-hash-care') ) {
