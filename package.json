@@ -1,6 +1,6 @@
 {
   "name": "s-logger",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "A simple logger with DEBUG state and light customization",
   "main": "index.js",
   "repository": {
