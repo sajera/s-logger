@@ -3,19 +3,19 @@
   "version": "2.0.1",
   "description": "A simple logger with DEBUG state and light customization",
   "main": "index.js",
+  "scripts": {
+    "test": "node test/test.js"
+  },
+  "homepage": "https://github.com/sajera/s-logger#readme",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/sajera/s-logger.git"
   },
-  "keywords": [ "console.log", "log", "logger", "s-log","s-logger" ],
-  "author": "sajera",
-  "license": "MIT",
   "bugs": {
     "url": "https://github.com/sajera/s-logger/issues"
   },
-  "homepage": "https://github.com/sajera/s-logger#readme",
-  "dependencies": {},
-  "scripts": {
-    "test": "node ./test/test.js"
-  }
+  "keywords": [ "console.log", "log", "logger", "s-log","s-logger" ],
+  "author": "Sajera: Serhii P <allsajera@gmail.com>",
+  "license": "MIT",
+  "dependencies": {}
 }
