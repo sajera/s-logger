@@ -1,3 +1,6 @@
+[![NPM version][npm-image]][npm-url]
+[![License][license-image]][license-url]
+
 s-logger
 ===============
 ### A simple log with DEBUG state and light customization
@@ -141,3 +144,9 @@ log('custom',
 	some Array: [ 1, 2, 3, 'some other' ]
 */
 ```
+
+
+[npm-image]: https://badge.fury.io/js/s-logger.svg
+[npm-url]: https://npmjs.org/package/s-logger
+[license-image]: http://img.shields.io/npm/l/s-logger.svg
+[license-url]: LICENSE
